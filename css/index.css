@@ -5,6 +5,11 @@ a{text-decoration: none;}
 html {scroll-behavior:smooth;}
 body{background-color: ;}
 
+/* 라이트박스 */
+.inner .btn{width:750px;}
+
+  
+
 /* 서체패밀리 */
 body {font-family: 'Ubuntu', sans-serif;
   transition: 0.3s ease-out;
@@ -44,7 +49,10 @@ body {font-family: 'Ubuntu', sans-serif;
 
 
 /* 버튼 */
-.btn{display: flex;justify-content: space-evenly;padding-bottom: 20px;}
+.btn{
+    display: flex;justify-content: space-evenly;
+    padding: 20px;border: 1px solid red;
+}
 .btn p{
     width: 200px;height:auto;border-radius: 10px;
     text-align: center;line-height: 60px;
@@ -54,7 +62,7 @@ body {font-family: 'Ubuntu', sans-serif;
     display: block;
     font-size: 16px;font-weight: 600;text-align: center;transition: 0.3s;color: #333;
 }
-.btn p:hover {background-color:  #07604f;color: #fff;border: 1px transparent;transition: 1s;box-shadow: 10px 10px 8px #ccc;}
+/* .btn p:hover {background-size: cover;transition: 1s;box-shadow: 5px 10px 15px #ddd; border: 1px solid transparent;} */
 .btn p:hover a{color: #fff;}
 
 
@@ -123,14 +131,14 @@ body {font-family: 'Ubuntu', sans-serif;
 
 
 /* 사이드 메뉴 */
-#nav {
+/* #nav {
     position: fixed;
     z-index: 100;
     margin-top: -32px;
     top: 50%;
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
-}
+} */
 /* #nav {
     position: fixed;
     z-index: 100;
@@ -459,7 +467,7 @@ body {font-family: 'Ubuntu', sans-serif;
 
 /* =================== */
 /*디자인 작업 부분*/
-.design{
+/* .design{
     width: 100%;
     height: 969px;
 }
@@ -472,7 +480,7 @@ body {font-family: 'Ubuntu', sans-serif;
     width: 1240px;
     margin: 0 auto;
     height: 810px;
-    /* overflow: hidden; */
+    overflow: hidden;
     position: relative;
     border-radius: 30px;
 }
@@ -486,7 +494,7 @@ body {font-family: 'Ubuntu', sans-serif;
 }
 .design .item img{
     transition: 0.5s;
-    /* overflow: hidden; */
+    overflow: hidden;
     filter: grayscale(0.4);
 }
 .design .item:hover img{
@@ -523,7 +531,7 @@ body {font-family: 'Ubuntu', sans-serif;
     width: 48%;
     height: 484px;
     margin-right: 20px;
-    /* overflow: hidden; */
+    overflow: hidden;
     float: left;
 }
 .design .item:nth-child(4) img{
@@ -548,7 +556,7 @@ body {font-family: 'Ubuntu', sans-serif;
     width: 50.3%;
     float: left;
     height: 202px;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 .design .item:nth-child(6) img{
     transition: 5s linear;
@@ -618,12 +626,114 @@ body {font-family: 'Ubuntu', sans-serif;
 }
 .arrow i:first-child{
     left: -54%;
-}
+} */
 /* .window-arrow i:hover{
     color: orangered;
 } */
 
+/* =================== */
 
+/* 젭알 */
+
+.My_work .inner 
+.My_work .inner .title .pfNum{width:100%;border-bottom:1px solid black; margin-bottom:15px;}
+/* .My_work .inner .title .siteName{margin-top:-10px;} */
+
+/* My_work btn */
+.My_work .inner .btn{top:160px;}
+.My_work .inner .btn p{position:relative;}
+.My_work .inner .btn p:before{content:""; display:block; width:20px; height:10px; border-radius: 10px; transform:rotate(-45deg); text-indent:-9999px; position:absolute; top:21px; left:36px;}
+
+/* tabBox */
+.My_work .inner .tabBox{
+    width:960px; height:600px;margin:0 auto; border: 1px solid rgb(18, 51, 214);}
+.My_work .inner .tabBox li{
+    overflow:hidden;
+    transition:all 0.3s;
+    box-sizing:border-box;
+}
+.My_work .inner .tabBox li i{display:block;width: 100%;height:100%;text-indent: -9999px;transition:all 0.3s;}
+.My_work .inner .tabBox li a{
+    transition:all 0.3s;position:relative;z-index: 300;
+}
+.My_work .inner .tabBox li a span{
+    display:block;
+    width:100%; height:100%;
+    position:absolute; top:0; left:0;
+    background:url(../img/hover_more.png);
+    background-color: rgba(0, 0, 0, 0.3);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:80px auto;
+    padding-top:30%; text-align: center; font-size:18px; opacity:0; transition:all 0.3s; z-index: 400; text-indent:0; color:#fff;}
+
+.My_work .inner .tabBox li:hover i{transform:scale(0.95);}
+.My_work .inner .tabBox li:hover span{opacity:1;}
+
+
+/* posterPage */
+/* .My_work .inner .posterPage li{width:440px;height:600px;} */
+.My_work .inner .posterPage li{
+    width: 280px;
+    height: 310px;
+    /* margin-bottom: 30px; */
+    float: left;
+    border: 1px solid #eee;
+}
+.My_work .inner .posterPage li:nth-child(1){margin-left:30px;}
+.My_work .inner .posterPage li:nth-child(2){margin: 0  30px;}
+/* .My_work .inner .posterPage li:nth-child(3n){margin-right:0;} */
+/* .My_work .inner .posterPage li:nth-child(4){height:310px; margin-bottom:0;} */
+/* .My_work .inner .posterPage li:nth-child(5){height:310px; margin-bottom:0;} */
+/* .My_work .inner .posterPage li:nth-child(6){height:310px; margin-bottom:0;} */
+/* .My_work .inner .posterPage li a{display:block;text-indent:-9999px;width:300px;height:100%;} */
+.My_work .inner .posterPage li:nth-child(1) i{
+    background:url(../img/etc_work_01_284x400.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.My_work .inner .posterPage li:nth-child(2) i{
+    background:url(../img/etc_work-04_284x400.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.My_work .inner .posterPage li:nth-child(3) i{
+    background:url(../img/preview-4.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+/* .My_work .inner .posterPage li:nth-child(2) i{background:url(../images/etc_bnr_02.jpg) no-repeat;}
+.My_work .inner .posterPage li:nth-child(3) i{background:url(../images/etc_bnr_03.jpg) no-repeat;}
+.My_work .inner .posterPage li:nth-child(4) i{background:url(../images/etc_bnr_04.jpg) no-repeat;}
+.My_work .inner .posterPage li:nth-child(5) i{background:url(../images/etc_bnr_05.jpg) no-repeat;}
+.My_work .inner .posterPage li:nth-child(6) i{background:url(../images/etc_bnr_06.jpg) no-repeat;} */
+
+/* artPage */
+.My_work .inner .artPage{display:none;}
+.My_work .inner .artPage li{width:300px; height:235px; margin-right:30px; float:left; border:1px solid #eee;}
+.My_work .inner .artPage li:last-child{margin-right:0;}
+.My_work .inner .artPage li a{display:block; text-indent:-9999px; width:300px; height:100%;}
+/* .My_work .inner .artPage li:nth-child(1) i{background:url(../images/etc_bnr_art_01.jpg) no-repeat;}
+.My_work .inner .artPage li:nth-child(2) i{background:url(../images/man_sum.jpg) no-repeat;}
+.My_work .inner .artPage li:nth-child(3) i{background:url(../images/etc_bnr_art_03.jpg) no-repeat;} */
+
+
+
+
+
+/* Hover_btn_color */
+.My_work .inner .btn p:hover{border: 1px solid transparent;}
+
+.My_work .inner .btn .btnAll:hover a {background-color: #c3daf6;}
+.My_work .inner .btn .btnPoster:hover a {background-color:#4071bf;}
+.My_work .inner .btn .btnArt:hover a {background-color:  #4071b4;}
+
+
+
+/* =================== */
 
 
 /* =================== */
@@ -662,7 +772,7 @@ body {font-family: 'Ubuntu', sans-serif;
 /* 
 =========== */
 
-#nav {
+/* #nav {
     position: fixed;
     z-index: 100;
     margin-top: -32px;
@@ -700,11 +810,11 @@ body {font-family: 'Ubuntu', sans-serif;
     height: 13px;
     margin: 7px;
     position:relative;
-}
+} */
 /* .fp-slidesNav ul li {
     display: inline-block;
 } */
-#nav ul li a{
+/* #nav ul li a{
     display: block;
     position: relative;
     z-index: 1;
@@ -762,7 +872,7 @@ body {font-family: 'Ubuntu', sans-serif;
     transition: opacity 0.2s ease-in;
     width: auto;
     opacity: 1;
-}
+} */
 
 /* #nav a.active + .fp-tooltip {
     -webkit-transition: opacity 0.2s ease-in;
@@ -770,20 +880,20 @@ body {font-family: 'Ubuntu', sans-serif;
     width: auto;
     opacity: 1;
 } */
-#nav ul li .fp-tooltip.right {
+/* #nav ul li .fp-tooltip.right {
     right: 20px;
 }
 #nav ul li .fp-tooltip.left {
     left: 20px;
-}
-.fp-auto-height.fp-section,
+} */
+/* .fp-auto-height.fp-section,
 .fp-auto-height .fp-slide,
 .fp-auto-height .fp-tableCell{
     height: auto !important;
-}
+} */
 
-.fp-responsive .fp-auto-height-responsive.fp-section,
+/* .fp-responsive .fp-auto-height-responsive.fp-section,
 .fp-responsive .fp-auto-height-responsive .fp-slide,
 .fp-responsive .fp-auto-height-responsive .fp-tableCell {
     height: auto !important;
-}
+} */

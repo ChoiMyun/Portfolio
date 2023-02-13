@@ -148,17 +148,17 @@ $(function(){
 
 
   //    // lightbox 
-  // lightbox.option({
-  //   'resizeDuration': 200,
-  //   'wrapAround': true
-  // })
+  lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true
+  })
 	// //etc탭메뉴
-	// $("#etc .btnSet p").click(function(){
-	// 	var i = $(this).index()
-	// 	$(".tabBox ul").hide()
-	// 	$(".tabBox ul").eq(i).fadeIn()
-	// 	return false;
-	// })
+	$("#mywork .btn p").click(function(){
+		var i = $(this).index()
+		$(".tabBox ul").hide()
+		$(".tabBox ul").eq(i).fadeIn()
+		return false;
+	})
 
   
 
