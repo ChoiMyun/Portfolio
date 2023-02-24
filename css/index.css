@@ -11,10 +11,11 @@ section .inner{border: 2px solid blue;}
   
 
 /* 서체패밀리 */
-body {font-family: 'Ubuntu', sans-serif;
-  transition: 0.3s ease-out;
-  overflow-x: hidden;
-  background-color: #f7f7f7eb
+body {
+    /* font-family: 'Gloock', serif; */
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Nanum Gothic', sans-serif;
+    background-color: #f7f7f7eb
 }
 
 /* title = 24px bold 'inherit' color:#333
@@ -38,8 +39,9 @@ body {font-family: 'Ubuntu', sans-serif;
 .content{width: 100%; padding: 100px 0}
 .inner{width: 1170px; margin: 0 auto;}
 .wrap{display: flex; justify-content: space-between; flex-wrap: wrap;}
-.title{font-size: 30px; color: #1B3060; text-align: center;padding: 30px 0;border: 1px solid yellowgreen;}
-.txt{font-size: 16px; color: #333; text-align: center;}
+.title{font: 40px 'DM Serif Display'; color: #1B3060; text-align: center;border: 1px solid yellowgreen;}
+.sub_title{font: 25px 'DM Serif Display';}
+/* .txt{font: 16px 'Nanum Gothic'; color: #333; text-align: center;background-color: #E45B75;} */
 
 /* 배경오버레이 */
 .bg-overlay {
@@ -58,10 +60,11 @@ body {font-family: 'Ubuntu', sans-serif;
 }
 .btn p a{
     display: block;
-    font-size: 16px;font-weight: 600;text-align: center;transition: 0.3s;color: #333;
+    font: bold 16px/60px 'Nanum Gothic';text-align: center;transition: 0.3s;color: #333;
 }
 .btn p:hover {overflow: hidden;border: 1px transparent;}
 .btn p:hover a{color: #fff;}
+
 
 
 
@@ -91,10 +94,10 @@ body {font-family: 'Ubuntu', sans-serif;
     width: 100%;top: 0;
     z-index: 9999;background: #fff;box-shadow:0 0 5px #ddd;
 }
-.header .inner{height: 100px; display: flex; justify-content: space-between; align-items: center; }
+.header .inner{height: 100px; display: flex; justify-content: space-between; align-items: center;    background-color: violet }
 
 
-.header .inner .header_logo{display: flex;width: 300px;align-items: center;border: 1px solid red;}
+.header .inner .header_logo{display: flex;width: 300px;align-items: center;}
 .header .inner .header_logo img{width: 15%;margin-right: 20px;}
 .header .inner .header_logo h2{font-size: 20px;color: #000; text-align: center;padding: 30px 0;}
 
@@ -292,7 +295,7 @@ body {font-family: 'Ubuntu', sans-serif;
 }
 .home .img-section p{
     position: absolute;
-    font-size: 80px;
+    font: 80px 'DM Serif Display';
     text-align: center;transform: translateX(-50%);
     color: #E45B75;
     z-index: 2;
@@ -332,15 +335,14 @@ body {font-family: 'Ubuntu', sans-serif;
 .about .left h3{
     position: absolute;
     top: 100px;right: -10px;
-    font-size: 20px;line-height: 40px;
+    line-height: 40px;
     z-index: 2;
 }
 .about .left h3 span{font-size: 30px;color: #E45B75;}
 .about .left img:nth-child(2) {
     position: absolute;
-    top:120px;
-    left: -20%;
-    z-index: 2;
+    top:300px;
+    left: -40%;
     width: 350px;
 }
 .about .left img:nth-child(3) {
@@ -350,22 +352,16 @@ body {font-family: 'Ubuntu', sans-serif;
     z-index: 1;
     width: 360px;border-radius: 15px;
 }
-.about .left img:nth-child(4) {
-    position: absolute;
-    top: 150px;
-    left: -30%;
-    width: 400px;
-}
 .about .left .keyword{
     width: 320px;
     height: 40px;
     position: absolute;
-    left: 20%;top: 400px;
+    left: 18%;top: 400px;
     background-color: #EABB63;
     border-radius: 20px;
     z-index: 2;
 }
-.about .left .keyword h4{position: absolute;left: -110px;top: 7px;font-size: 18px;color: #1B3060;}
+.about .left .keyword h4{position: absolute;left: -110px;top: 7px;font: 18px 'DM Serif Display';color: #1B3060;}
 .about .left .keyword ul{width: 100%;height: 100%;line-height: 35px;}
 
 .about .left .keyword ul li{
@@ -388,7 +384,7 @@ body {font-family: 'Ubuntu', sans-serif;
     width: 50%;
     top: 15%;right: 0
 }
-.about .right h3{margin-bottom: 10px;font-size: 20px;color: #E45B75;}
+.about .right .sub_title{margin-bottom: 10px;color: #E45B75;}
 
 .about .right .profile{
     position: absolute;
@@ -404,10 +400,15 @@ body {font-family: 'Ubuntu', sans-serif;
     width: 490px;font-size: 14px;line-height: 30px;
 }
 .about .right .experiences span{margin-left: 20px;}
-.about .right img{
+.about .right img:nth-child(3){
     position: absolute;
-    top:350px;right:-300px;
-    width: 500px;
+    top:340px;right:-200px;
+    width: 370px;z-index: 1;
+}
+.about .right img:nth-child(4) {
+    position: absolute;
+    top:350px;right:-230px;
+    width: 400px;
 }
 /* =================== */
 
@@ -469,18 +470,25 @@ body {font-family: 'Ubuntu', sans-serif;
 
 /* =================== */
 
-.project1{}
+.project1{
+    background: url(../img/500pxhomeimg-11.png) no-repeat;
+    background-size: 60%;
+    background-position: 800px 100px; 
+}
 .project1 .inner{position: relative;}
 
 .project1 .title{
     position: absolute;
     left: 0;top: 0;
-    font-size: 24px;line-height: 40px;
+    font-size: 24px;line-height: 70px;
     text-align: left;
 }
-.project1 .title .sub_name{border-bottom: 2px solid #1B3060;}
-.project1 .title .name{margin-top: 20px;}
+.project1 .title .number{font-size: 30px;}
+.project1 .title .sub_title{font: bold  18px 'Nanum Gothic';padding-bottom: 5px;border-bottom: 2px solid #1B3060;}
+.project1 .title .name{font: bold  30px 'Nanum Gothic';margin-top: 20px;}
 
+/* project1 - 상단 작업이미지 */
+.project1 .project_img {text-indent: -9999px;}
 .project1 .project_img .wrap{
     position:relative;left: 60%;height: 50%;transform:translate(-50%);
     width: 960px ;height: 540px;overflow: hidden;
@@ -488,18 +496,81 @@ body {font-family: 'Ubuntu', sans-serif;
 .project1 .project_img .wrap p{width: 100%;position: absolute;}
 .project1 .project_img .wrap p img{width: 80%}
 
+/* project1 - 상단 작업이미지 - PC */
+.project1 .inner .project_img .pc{
+    height: 600px;
+    background:url(../img/project1-1.png) no-repeat;
+    background-size: 100%;
+}
+.project1 .inner .project_img .pc span{
+    display:block;
+    position:absolute;
+    top: 110px;left: 50%;transform: translateX(-50%);
+    width:510px; height:300px;
+    background:url(../img/Portfolio-1st-project.png);
+    background-size:cover;
+}
+.project1 .inner .project_img .pc span:hover{animation:shiScroll 10s ease infinite;}
+.project1 .inner .project_img .pc i{left:25px; top:30px; background:rgba(64, 132, 231,0.5);}
 
+.project1 .inner .project_img .pc i {
+    display: block;
+    position: absolute;
+    left: 780px;top: 100px;
+    width: 80px;height: 80px;
+    border-radius: 50%;
+    color: #000;
+    text-align: center;
+    text-indent: 0;
+    padding: 20px 0;
+    font: 12px/20px 'Ubuntu';
+    opacity: 1;
+    background: #EDF5E6;
+
+}
+/* project1 - 상단 작업이미지 - tablet */
+.project1 .inner .project_img .tablet{
+    position: absolute;
+    top: 0;right: -30px;
+    width: 360px;height: 650px;
+    background: url(../img/project1-2.png);
+    background-position: right;
+    background-size: cover;
+
+}
+/* project1 - 상단 작업이미지 - phone */
+.project1 .inner .project_img .phone{
+    position: absolute;
+    top: 0;left: -30px;
+    width: 360px;height: 650px;
+    background:url(../img/project1-3.png);
+    background-position: left;
+    background-size: cover;
+}
+
+@keyframes shiScroll{
+	0%{background-position: 0 0;}
+    25%{background-position:0 -500px}
+	50%{background-position:0 -1000px}
+    75%{background-position:0 -1450px}
+	100%{background-position: 0 0;}
+}
+
+/* project1 - 작업설명 */
 .project1 .project_info{
     position: relative;
-    width: 100%;bottom: 130px;text-align: left;
-    line-height: 40px;
+    width: 100%;bottom: 0px;
     border: 3px solid red;
 }
-.project1 .project_info .info_left,.info_right{width: 50%;padding: 20px;border: 4px solid goldenrod;}
-.project1 .project_info .info_left span{font-weight: bold;letter-spacing: 2px;margin-right: 30px;}
-.project1 .info_right>p{font-size: 14px;}
+.project1 .project_info .info_left,
+.project_info .info_right{
+    width: 50%;padding: 10px 30px;
+    text-align: left; font-size: 14px; line-height: 30px;
+}
+.project1 .project_info .info_left span,.description_concept{font: bold 16px 'ub';letter-spacing: 2px;margin-right: 20px;}
 
-/* project#1 하단 박스 버튼 */
+
+/* project1 하단 박스 버튼 */
 .project1 .project_info .info_bottom{padding: 10px 0 ;}
 .project1 .project_info .info_bottom .btn{transform: translateX(25%);}
 .project1 .btn p:hover {background-color: #0F5C4B;}
@@ -511,40 +582,106 @@ body {font-family: 'Ubuntu', sans-serif;
 /* =================== */
 
 .project2{
-    background-repeat: no-repeat;
+    background: url(../img/500pxhomeimg-08.png) no-repeat;
     background-size: cover;
-    background-position:center;
+    background-position: -600px -300px;
 }
 .project2 .inner{position: relative;}
 
 .project2 .title{
     position: absolute;
     left: 0;top: 0;
-    font-size: 24px;line-height: 40px;
+    font-size: 24px;line-height: 70px;
     text-align: left;
 }
-.project2 .title .sub_name{border-bottom: 2px solid #1B3060;}
-.project2 .title .name{margin-top: 20px;}
+.project2 .title .number{font-size: 30px;}
+.project2 .title .sub_title{font: bold  18px 'Nanum Gothic';padding-bottom: 5px;border-bottom: 2px solid #1B3060;}
+.project2 .title .name{font: bold  30px 'Nanum Gothic';margin-top: 20px;}
 
+/* project2 - 상단 작업이미지 */
+.project2 .project_img {text-indent: -9999px;}
 .project2 .project_img .wrap{
     position:relative;left: 60%;height: 50%;transform:translate(-50%);
     width: 960px ;height: 540px;overflow: hidden;
 }
-
 .project2 .project_img .wrap p{width: 100%;position: absolute;}
-.project2 .project_img .wrap p img{width: 80%;}
+.project2 .project_img .wrap p img{width: 80%}
 
+/* project2 - 상단 작업이미지 - PC */
+.project2 .inner .project_img .pc{
+    height: 600px;
+    background:url(../img/project2-1.png) no-repeat;
+    background-size: 100%;
+}
+.project2 .inner .project_img .pc span{
+    display:block;
+    position:absolute;
+    top: 110px;left: 50%;transform: translateX(-50%);
+    width:530px; height:300px;
+    background:url(../img/Portfolio-2nd-project.png);
+    background-size:cover;
+}
+.project2 .inner .project_img .pc span:hover{animation:shiScroll 10s ease infinite;}
+.project2 .inner .project_img .pc i{left:25px; top:30px; background:rgba(64, 132, 231,0.5);}
 
+.project2 .inner .project_img .pc i {
+    display: block;
+    position: absolute;
+    left: 780px;top: 100px;
+    width: 80px;height: 80px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    text-indent: 0;
+    padding: 20px 0;
+    font: 12px/20px 'Ubuntu';
+    opacity: 1;
+    background: #bf6160;
+
+}
+/* project2 - 상단 작업이미지 - tablet */
+.project2 .inner .project_img .tablet{
+    position: absolute;
+    top: 0;left: -30px;
+    width: 360px;height: 650px;
+    background: url(../img/project2-2.png);
+    background-position: left;
+    background-size: cover;
+
+}
+/* project2 - 상단 작업이미지 - phone */
+.project2 .inner .project_img .phone{
+    position: absolute;
+    top: 0;right: -30px;
+    width: 360px;height: 650px;
+    background:url(../img/project2-3.png);
+    background-position: right;
+    background-size: cover;
+}
+
+@keyframes shiScroll{
+	0%{background-position: 0 0;}
+    15%{background-position:0 -500px}
+    30%{background-position:0 -1000px}
+    45%{background-position:0 -1500px}
+	60%{background-position:0 -2000px}
+    75%{background-position:0 -3000px}
+    90%{background-position:0 -4100px}
+	100%{background-position: 0 0;}
+}
+
+/* project2 - 작업설명 */
 .project2 .project_info{
     position: relative;
-    width: 100%;bottom: 30px;text-align: left;
-    line-height: 40px;
+    width: 100%;bottom: 0px;
     border: 3px solid red;
 }
-.project2 .project_info .info_left,.info_right{width: 50%;padding: 20px;border: 4px solid goldenrod;}
-.project2 .project_info .info_left span{font-weight: bold;letter-spacing: 2px;margin-right: 30px;}
-
-.project2 .info_right>p{font-size: 14px;}
+.project2 .project_info .info_left,
+.project_info .info_right{
+    width: 50%;padding: 10px 30px;
+    text-align: left; font-size: 14px; line-height: 30px;
+}
+.project2 .project_info .info_left span,.description_concept{font: bold 16px 'ub';letter-spacing: 2px;margin-right: 20px;}
 
 /* project#2 하단 박스 버튼 */
 .project2 .project_info .info_bottom{padding: 10px 0 ;}

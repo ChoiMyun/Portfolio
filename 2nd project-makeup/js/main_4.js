@@ -98,7 +98,6 @@ $(function () {
       }
     });
 
-    // TODO
     $(".sub_txt>ul>li").each(function (index) {
       if (
         scroll >= sub_title_pos[index] + base_line &&
@@ -109,7 +108,7 @@ $(function () {
   });
     //  스와이프
 
-    let swiper_left = new Swiper('.est_item .left .swiper', {
+    let swiper_left = new Swiper('.best_item .left .swiper', {
       loop: true,
       autoplay: {
         delay: 3000,
@@ -122,7 +121,7 @@ $(function () {
       },
     });
   
-    let swiper_right = new Swiper('.est_item .right .swiper', {
+    let swiper_right = new Swiper('.best_item .right .swiper', {
       loop: true,
       autoplay: {
         delay: 3000,
@@ -136,8 +135,8 @@ $(function () {
 
 
     let swiper_event = new Swiper(".event .event_swiper", {
+      loop: true,
       navigation: {
-        loop: true,
         nextEl: ".event .swiper-button-next",
         prevEl: ".event .swiper-button-prev",
       },
@@ -178,14 +177,12 @@ $(function () {
     }
   });
 
-  // $('.search_area>a').on('click', function(){
-  //     $('.search_box').on('show');
-  // });
 
   // 토글 메뉴바
 
   $(".toggle").on("click", function () {
     $(".gnb_wrap").toggleClass("on");
+    $('.header').toggleClass('on');
   });
 
   // 메인슬라이드
