@@ -35,17 +35,7 @@ $(function(){
       }
   });
 
-  // 윈도우 스크롤 이벤트
-  // $(window).on('scroll', function(){
-  //   let scroll = $(this).scrollTop();
-      
-  //   $('.content').each(function(index){ // <-- 현재 요소의 인덱스번호
-  //     if( scroll >= pos [index] + base_line && scroll < pos[index+1] + base_line){
-  //         $(this).addClass('on');
-  //         $(this).addClass('on').siblings().removeClass('on');
-  //       }
-  //   });
-  // });
+
     
   // toggle 메뉴바
   $('.toggle').on('click', function(){
@@ -53,27 +43,6 @@ $(function(){
     $('.header').toggleClass('on');
   });
 
-
-  // 스와이프
-  // let per_view = new Swiper('.per_view .swiper', {
-  //   slidesPerView: 1,
-  //   spaceBetween: -30,
-  //   loop: true,
-  //   loopAdditionalSlides : 1,
-  //   autoplay: {
-  //     delay: 3000,
-  //     disableOnInteraction: false,
-  //   },
-  //   pagination: {
-  //     el: ".swiper-pagination",
-  //     // type: "fraction",
-  //     clickable: true,
-  //   },
-  //   navigation: {
-  //     nextEl: '.per_view .swiper-button-next',
-  //     prevEl: '.per_view .swiper-button-prev',
-  //   },
-  // });
 
   //about => keyword 소개
   const wr = document.querySelector(".about .left .keyword ul");
@@ -151,7 +120,8 @@ $(function(){
   lightbox.option({
     'resizeDuration': 200,
     'wrapAround': true
-  })
+  });
+
 	// //mywork 탭메뉴
 	$("#mywork .btn p").click(function(){
 		var i = $(this).index()

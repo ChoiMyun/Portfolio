@@ -551,8 +551,8 @@ body {
 @keyframes shiScroll{
 	0%{background-position: 0 0;}
     25%{background-position:0 -500px}
-	50%{background-position:0 -1000px}
-    75%{background-position:0 -1450px}
+	50%{background-position:0 -1500px}
+    75%{background-position:0 -2000px}
 	100%{background-position: 0 0;}
 }
 
@@ -621,7 +621,7 @@ body {
     background:url(../img/Portfolio-2nd-project.png);
     background-size:cover;
 }
-.project2 .inner .project_img .pc span:hover{animation:shiScroll 10s ease infinite;}
+.project2 .inner .project_img .pc span:hover{animation:shiScroll-1 10s ease infinite;}
 .project2 .inner .project_img .pc i{left:25px; top:30px; background:rgba(64, 132, 231,0.5);}
 
 .project2 .inner .project_img .pc i {
@@ -659,7 +659,7 @@ body {
     background-size: cover;
 }
 
-@keyframes shiScroll{
+@keyframes shiScroll-1{
 	0%{background-position: 0 0;}
     15%{background-position:0 -500px}
     30%{background-position:0 -1000px}
