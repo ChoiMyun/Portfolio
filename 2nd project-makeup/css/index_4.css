@@ -3,6 +3,11 @@
 li, ul, ol{list-style: none;}
 a{text-decoration: none;color: #333;}
 
+body{
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
 /* title = 24px bold 'inherit' color:#333
     sub_title (h2~h3) = 18px bold 'inherit' color :#333
 */
@@ -19,10 +24,10 @@ a{text-decoration: none;color: #333;}
 
 /* 공통영역 */
 .content{width: 100%; padding: 100px 0; }
-.inner{width: 1170px; margin: 0 auto; }
+.inner{width: 1170px; margin: 0 auto; border: 1px solid blue;}
 .wrap{display: flex; justify-content: space-between; flex-wrap: wrap;}
 .content .title{ font: bold 24px 'inherit'; color: #333; text-align: center; margin: 0 0 40px;}
-.sub_title{color: goldenrod;}
+.sub_title{color: goldenrod;font-family: 'Cormorant Garamond', serif; font-weight:700 ;}
 .content .txt{font : 16px 'inherit'; color: #333; text-align: center; margin: 0 0 40px;}
 
 .swiper-button-prev,
@@ -299,7 +304,7 @@ a{text-decoration: none;color: #333;}
 .best_item .left .sub_txt{text-align: left;}
 
 .left .swiper .swiper-slide{width: 340px;height: 400px;background-color:#fff}
-.left .swiper .swiper-slide .best_name{font: bold 36px 'inherit'; color: #333;margin-top: 40px;}
+.left .swiper .swiper-slide .best_name{font-size: 48px;font-family: 'Cormorant Garamond', serif;font-weight: 700; color: #333;margin-top: 40px;}
 .left .swiper .swiper-slide .ko_tit{margin: 20px 0 40px; color: #666;}
 .left .swiper-slide .review{display: flex;}
 .left .swiper-slide .review_star{color: #333;margin-right: 10px;}
@@ -394,10 +399,105 @@ a{text-decoration: none;color: #333;}
     .best_item .right .swiper-button-next{right: calc(50% - 120px); top: 30%}
 }
 
+/* 6. New Item */
+.newitem{background-color: lightyellow}
+.newitem .inner{position: relative;height: 900px;}
+
+.newitem .sub_title{margin: 0 0 40px;}
+.newitem .sub_title,
+.newitem .title,
+.newitem .txt
+{text-align: left;}
+
+.newitem .newitem_name{font-size: 12px;}
+.newitem .newitem_txt{font: 14px/20px 'inherit';}
+
+.newitem .pull-left{
+    position: absolute;left: 0;top:0;
+    width: 200px;
+    border: 1px solid red;
+}
+.newitem .wrap{
+    position: absolute;right: 0px; top: 0;
+    width: calc(100% - 250px);height: 900px;
+    border: 2px solid black;
+
+    /* display: flex;justify-content: space-between;flex-wrap: wrap; */
+}
 
 
 
-/* 6. 룩북 */
+
+/* .newitem .pull-right{position: relative;width: calc(100% - 370px);float: right}
+.newitem .pull-right>ul{
+    position: absolute;border: 1px solid black;
+    display: flex;justify-content: space-between;
+} */
+
+/* 스크롤 이벤트 */
+
+/* .newitem .wrap .pull-right .group-1{transition-delay: 2s; transform: translateX(-200px);}
+.newitem .wrap .pull-right .group-2{transition-delay: 4s;transform: translateX(200px);}
+.newitem .wrap .pull-right.on {transform: translateX(0);} */
+
+
+.newitem .wrap .pull-right{width: 250px;height:400px;background-color: #efefef; opacity: 0; transition: 0.5s;margin: 0 0 30px;}
+.newitem.on .wrap  .pull-right{opacity: 1;}
+.newitem .wrap  .pull-right .thumnail_pic{width:100%;}
+.newitem .wrap .pull-right .thumnail_pic img{width: 100%;}
+
+
+.newitem .wrap .pull-right .newitem_description{width: 100%; padding: 20px; text-align: center;}
+.newitem .wrap .pull-right .newitem_description .newitem_name{color: #333;}
+.newitem .wrap .pull-right .newitem_description .newitem_txt{margin: 20px 0; color: #666;}
+
+
+.newitem .pull-right .item_list .thumnail_pic{position: relative}
+.newitem .pull-right >ul .thumnail_pic img{width: 100%;height: auto; box-sizing: border-box;max-width: 100%;}
+
+.newitem .pull-right >ul .thumbnail__hover{
+    position: absolute;
+    top: 0;left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.newitem .pull-right >ul > li:hover .thumbnail__hover {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.4s ease-in-out;
+    
+}
+
+@media screen and (max-width : 1200px){
+    .newitem .wrap .pull-right{width: 29%;}
+}
+@media screen and (max-width : 960px){
+    .newitem .wrap .pull-right{width: 45%}
+}
+@media screen and (max-width : 768px){
+    .newitem .wrap {top: 250px;left: 0;width: 100%;}
+    .newitem .wrap .pull-right{width: 30%;}
+    /* .newitem .wrap .pull-right{width: 40%;height: 300px;} */
+}
+@media screen and (max-width : 480px){
+    .newitem{display: block;}
+    .newitem .pull-left{display: block;width: 100%;height: 200px;position: static;}
+    .newitem .wrap{width: 100%;height:auto;top: 250px;}
+}
+
+/* @media screen and (max-width : 1200px){
+    .newitem .wrap .pull-right{width: 22.75%;}
+}
+@media screen and (max-width : 960px){
+    .newitem .wrap .pull-right{width: 48.5%;}
+}
+@media screen and (max-width : 768px){
+    .newitem .wrap .pull-right{width: 0%;}
+} */
+
+
+
+/* 7. 룩북 */
 .look_book .inner{}
 .look_book .sub_title{text-align: center;}
 .look_book .title{font:bold 24px 'inherit';margin-top: 40px;text-align: center;color: #333;}
@@ -475,7 +575,7 @@ a{text-decoration: none;color: #333;}
 .gallery {position: relative; overflow: hidden;}
 .gallery .bg{position: absolute; left: 0; top: 0;width: 100%; height:100% ;
     background: url(../img/augustine-wong-li0iC0rjvvg-unsplash.jpg) center;opacity: 0.5;background-size: cover;}
-.gallery .title{text-transform: uppercase; font : bold 36px/80px 'inherit'; text-align: left;top: 80px; margin: 40px 0;padding: 0;}
+.gallery .title{text-transform: uppercase;font-size: 48px;font-family: 'Cormorant Garamond', serif;font-weight: 700; color: #333;text-align: left;line-height: 80px; margin: 40px 0 0 0;padding: 0;}
 
 .gallery .galleryswiper{width: 100%; padding: 0 40px 40px; text-align: center; transition: 0.3s;left: 300px}
 
