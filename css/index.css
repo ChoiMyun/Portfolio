@@ -661,12 +661,12 @@ body {
 
 @keyframes shiScroll-1{
 	0%{background-position: 0 0;}
-    15%{background-position:0 -500px}
-    30%{background-position:0 -1000px}
-    45%{background-position:0 -1500px}
-	60%{background-position:0 -2000px}
-    75%{background-position:0 -3000px}
-    90%{background-position:0 -4100px}
+    15%{background-position:0 -1000px}
+    30%{background-position:0 -2000px}
+    45%{background-position:0 -2500px}
+	60%{background-position:0 -3000px}
+    75%{background-position:0 -3500px}
+    90%{background-position:0 -4700px}
 	100%{background-position: 0 0;}
 }
 

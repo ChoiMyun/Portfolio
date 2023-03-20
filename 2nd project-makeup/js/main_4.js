@@ -136,10 +136,18 @@ $(function () {
 
     let swiper_event = new Swiper(".event .event_swiper", {
       loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
       navigation: {
         nextEl: ".event .swiper-button-next",
         prevEl: ".event .swiper-button-prev",
       },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      keyboard: true,
     });
 
     let swiper_gallery = new Swiper(".gallery .galleryswiper", {
