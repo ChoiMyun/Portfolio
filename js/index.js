@@ -35,6 +35,19 @@ $(function(){
       }
   });
 
+    // 윈도우 스크롤 이벤트
+  // $(window).on('scroll', function(){
+  //   let scroll = $(this).scrollTop();
+    
+  //   $('.section').each(function(index){ // <-- 현재 요소의 인덱스번호
+  //     if( scroll >= pos [index] + base_line && scroll < pos[index+1] + base_line){
+  //       $(this).addClass('on');
+  //       $(this) = $('.content').eq(index)
+  //       $(this).addClass('on').siblings().removeClass('on');
+  //       };
+  //     });
+  // });
+
 
     
   // toggle 메뉴바
@@ -68,53 +81,6 @@ $(function(){
       words[i].style.opacity = `${op}`;
     }
   }
-
-   //디자인
-//   let count = 0;
-//   $(".item").click(function(){
-//     $('html,body').on('scroll touchmove mousewheel', function(e) { 
-//       e.preventDefault();
-//       e.stopPropagation();
-//       return false;
-//     });
-
-//     let i = $(this).index();
-//     let item_img = $(this).find("img").attr("src");
-//     if(i == 3 || i == 5){
-//       $(".window-content").css("height", "100%").css("overflow", "hidden scroll")
-//     }else{
-//       $(".window-content").css("height", "auto").css("overflow", "hidden").css("font-size", "0")
-//     }
-//     $(".window").slideDown();
-//     $(".window-content").slideDown().find("img").attr("src", item_img);
-//     $(".arrow").show()
-//  })
-
-//  $(".arrow i").click(function(){
-//   let arrow = $(this).index();
-//   if(arrow == 0){
-//     count--;
-//     if(count < 0){
-//       count = $(".item").length - 1;}
-//     }else{
-//       count++;
-//       if(count > $(".item").length-1){
-//         count = 0;}
-//       }
-//       if(count == 3 || count == 5){
-//         $(".window-content").css("height", "100%").css("overflow", "hidden scroll")
-//       }else{
-//         $(".window-content").css("height", "auto").css("font-size", "0").css("overflow", "hidden")
-//       }
-//       $(".window-content img").attr("src", $(".item").eq(count).find("img").attr("src"))
-//  });
-
-//  $(".window-content i, .window").click(function(){
-//      $(".window").slideUp();
-//      $(".window-content, .arrow").slideUp()
-//      $('html,body').off('scroll touchmove mousewheel');
-//  })
-
 
   //  lightbox  // 
   lightbox.option({

@@ -415,13 +415,73 @@ body {
 /* 4. Skill */
 
 /* =================== */
-.skill{
+#skills{
+
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background: url(../img/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
 }
+
+/* 도표 느낌으로 */
+/* .skill_list{
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+}
+.skill_list .skill_name{
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 40px 0;
+}
+.skill_list .skill_bar{
+    height: 14px;
+    background: #1B3060;
+    border-radius: 6px;
+}
+.skill_list .skill_percent{
+    position: relative;
+    height: 14px;
+    background-color: #EABB63;
+    border-radius: 6px;
+    animation: fillskill 2.5s;
+}
+
+.skill_list .skill_percent::before{
+    position: absolute;
+    content: attr(per);
+    right: 0;top: -37px;
+    padding: 2px 8px;
+    transform: translateX(50%);
+    background-color: #fff;
+    border-radius: 3px;
+    color:#1B3060;
+    font-weight: 600;
+}
+.skill_list .skill_percent::after{
+    position: absolute;
+    content: "";
+    width:10px ;height: 10px;
+    right: 0; top: -19px;
+    transform: translateX(50%) rotate(45deg);
+    background-color: #fff;
+}
+
+@keyframes fillskill{
+    0%{ width: 0;}
+    100%{width: 100%;}
+
+} */
+
+
 .skill .inner{height: 700px;  position: relative;}
 .skill .title,.skill_description{
     position: absolute;left: 50%;transform: translateX(-50%);line-height: 50px;
@@ -438,13 +498,13 @@ body {
 .skill .icon li{
     width: 80px;
     text-align: center;margin: 0 auto;
-    color: #fff
+    color:#EABB63
 }
-.skill .icon li img{width: 100%;margin-bottom: 20px;}
 .skill .icon li span{font-size: 16px;font-weight:bold;}
 
-/* .skill .icon{transform: translateY(-80px);opacity: 0;} */
-/* .skill.on .icon{transition: 1s;transform: translateY(0);opacity: 1;} */
+.skill .icon{transform: translateY(-80px);opacity: 0;}
+.skill .icon{transform: translateY(-80px);opacity: 0;}
+.skill.on .icon{transition: 1s;transform: translateY(0);opacity: 1;}
 
 .skill .inner ul li{
     width: 100px;
@@ -453,7 +513,7 @@ body {
     text-align: center;
     font-weight: bold;
     border-radius: 50%;
-    background-color: #c3daf6;
+    background-color: #1B3060;
     float: left;
     position: relative;
     z-index: 1;
