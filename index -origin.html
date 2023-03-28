@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 웹사이트의 정보 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyungJi’s Portfolio</title>
+    <meta name="description" content="MyungJi’s Portfolio">
+    <meta name="author" content="MJ's HARU">
+
+    <!-- 웹사이트 아이콘 -->
+    <link rel="icon" type="imgs/svg" href="img/haru-solid-01.svg">
+
+    <!-- 구글폰트 font-family: 'Ubuntu' -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500&family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet"> -->
+
+    <!-- 구글폰트 DM Serif Display  / Nanum Gothic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- 자바스트립트 링크 -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="js/lightbox.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+
+    <!-- cdnj 에서 font-awesome 링크 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- 스와이프 링크 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- css 링크 -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+</head>
+<body>
+    <!-- 1.header - nav -->
+    <header class="header" id="header">
+        <div class="inner">
+            <div class="header_logo">
+                <img src="img/haru-solid-01.svg" alt="haru_logo">
+                <h2 class="name">MJ’s HARU Portfolio</h2>
+            </div>
+            <nav class="gnb_wrap">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skill</a></li>
+                    <li><a href="#portfolio1">Portfolio 1</a></li>
+                    <li><a href="#portfolio2">Portfolio 2</a></li>
+                    <li><a href="#mywork">My&nbsp;Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="toggle"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+
+    <!-- <div class="right" style="margin-top: -33.5px;" id="nav" style="display: block;">
+        <ul>
+            <li>
+                <a href="#about" class="active"><span></span></a>
+                <div class="fp-tooltip right">about</div>
+            </li>
+            <li>
+                <a href="#skill" class=""><span></span></a>
+                <div class="fp-tooltip right">Skill</div>
+            </li>
+            <li>
+                <a href="#project1" class=""><span></span></a>
+                <div class="fp-tooltip right">Project1</div>
+            </li>
+            <li>
+                <a href="#contact" class=""><span></span></a>
+                <div class="fp-tooltip right">Contact</div>
+            </li>
+        </ul>
+    </div> -->
+
+    <!-- 2.Home -->
+
+    <section class="content home" id="home">
+        <div class="inner">
+            <div class="wrap">
+                <div class="img-section">
+                    <img src="img/my_Photo.jpeg" alt="profile" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+                    <img src="img/500pxhomeimg-02.png" alt="object1" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="1000">
+                    <img src="img/500pxhomeimg-03.png" alt="object2" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="1000">
+                    <img src="img/500pxhomeimg_1.png" alt="object3" data-aos-easing="linear" class="rotation" >
+                    <p>Keep</p>
+                    <p>improving</p>
+                    <p>day by day</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 3. About -->
+    <section class="content about" id="about">
+        <div class="inner">
+            <h2 class="about title">About Me</h2>
+            <div class="about wrap">
+                <div class="left">
+                    <h3>
+                        <p>저는 <span>도전을</span> 실현하는 디자이너</p>
+                        <p><span>최명지</span> 입니다.</p>
+                    </h3>
+                    <img src="img/500pxhomeimg-09.png" alt="object4">
+                    <img src="img/choimj-2.jpeg" alt="profile photo" class="about_avatar">
+                    <div class="keyword">
+                        <!-- <h4>Keyword me</h4> -->
+                        <ul>
+                            <li><p>경력&nbsp;:&nbsp;저는&nbsp;<span>중고 신입사원</span>&nbsp;입니다.</p></li>
+                            <li><p>하고싶은 일&nbsp;:&nbsp;<span>웹퍼블리셔 & 디자인</span></p></li>
+                            <li><p>캐릭터&nbsp;:&nbsp;<span> #계획형-J #노력형 #야망가 #친밀</span></p></li>
+                            <li><p>별명&nbsp;:&nbsp;<span> #VitaC #일개미</span></p></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="right" data-aos="fade-left" data-aos-duration="900" 
+                data-aos-easing="ease-in">
+                    <div class="profile">
+                        <h3 class="about sub_title">Profile</h3>
+                        <div class="introduce">
+                            <p>도전, 긍정적 마인드 그리고 꼼꼼한 진행력</p>
+                            <p>해외 근무를 하며 큰 고민 끝에 디자인 & 웹퍼블리셔 분야에 문을 열게 되었습니다.</p>
+                            <p>저는 어려운 일을 겪더라도 긍정적인 생각을 가지고 문제를 해결하기 위해
+                                <br>연구하고 도전한다면 어떤 일이든 해결 가능하다고 생각합니다.
+                            </p>
+                            <p>위 같은 마음과 도전하는 것을 두려워하지 않고,<br>
+                            <span>더 나은 발전을 위해 꾸준히 공부하고 노력하겠습니다.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="experiences">
+                        <h3 class="about sub_title">Experiences</h3>
+                        <ul>
+                            <li>
+                                <p>
+                                    2022.03 ~ 휴학진행<span>이화 여자 대학원 진학중&nbsp;[광고-브랜드 디자인과]</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    2018.11 ~ 2021.03<span>SAMIL VINA(베트남지사)근무</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    2012.03 ~ 2017.02<span>강남대학교 졸업</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="img/500pxhomeimg-06.png" alt="object5">
+                    <img src="img/500pxhomeimg-05.png" alt="object6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4.Skill -->
+    <section class="content skills" id="skills">
+        <div class="inner">
+            <h2 class="title">Skill<br><span>Skill & Attributes</span>
+            </h2>
+
+            <ul class="icon" data-aos="fade-down" data-aos-duration="700" data-aos-easing="ease-in-sine">
+                <li>
+                    <span>PS</span>
+                </li>
+                <li>
+                    <span>AI</span>
+                </li>
+                <li>
+                    <span>HTML</span>
+                </li>
+                <li>
+                    <span>CSS</span>
+                </li>
+                <li>
+                    <span>JQUERY</span>
+                </li>
+            </ul>
+
+            
+            <!-- 도표느낌 -->
+            <!-- <div class="skill_list">
+                <div class="skill_description">
+                    <div class="skill_name">ps</div>
+                    <div class="skill_bar">
+                        <div class="skill_percent" per="90%" style="max-width: 90%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill_description">
+                    <div class="skill_name">ai</div>
+                    <div class="skill_bar">
+                        <div class="skill_percent" per="90%" style="max-width: 90%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill_description">
+                    <div class="skill_name">html</div>
+                    <div class="skill_bar">
+                        <div class="skill_percent" per="80%" style="max-width: 80%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill_description">
+                    <div class="skill_name">css</div>
+                    <div class="skill_bar">
+                        <div class="skill_percent" per="70%" style="max-width: 70%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill_description">
+                    <div class="skill_name">js</div>
+                    <div class="skill_bar">
+                        <div class="skill_percent" per="50%" style="max-width: 50%;"></div>
+                    </div>
+                </div>
+
+            </div> -->
+            
+
+
+            <!-- <p class="skill_description">
+                
+                저는 새로운것을 배우는것에 거부가 없으며 흥미를 느낍니다.
+
+            </p> -->
+
+            <!-- 큰표느낌으로 -->
+            <!-- <div class="skillset">
+                <div class="skill_description">
+                    <span>Photoshop</span>
+                    <span>80%</span>
+                </div>
+                <div class="skill_bar">
+                    <div class="skill_value"></div>
+                </div>    
+            </div>
+            <div class="skillset">
+                <div class="skill_description">
+                    <span>Illustration</span>
+                    <span>90%</span>
+                </div>
+                <div class="skill_bar">
+                    <div class="skill_value"></div>
+                </div>    
+            </div>
+            <div class="skillset">
+                <div class="skill_description">
+                    <span>HTML</span>
+                    <span>80%</span>
+                </div>
+                <div class="skill_bar">
+                    <div class="skill_value"></div>
+                </div>    
+            </div>
+            <div class="skillset">
+                <div class="skill_description">
+                    <span>CSS</span>
+                    <span>80%</span>
+                </div>
+                <div class="skill_bar">
+                    <div class="skill_value"></div>
+                </div>    
+            </div>
+            <div class="skillset">
+                <div class="skill_description">
+                    <span>JQUERY</span>
+                    <span>60%</span>
+                </div>
+                <div class="skill_bar">
+                    <div class="skill_value"></div>
+                </div>    
+            </div> -->
+
+
+
+        </div>
+    </section>
+
+    <!-- 5.project #1 -->
+    <section class="content project1"  id="portfolio1">
+        <div class="inner">
+            <h3 class="title">
+                <p class="number">Protfolio #1</p>
+                <p class="sub_title">반응형 메인페이지</p>
+                <p class="name">스윗밸런스</p>
+            </h3>
+
+            <div class="project_img">
+                <p class="pc" data-aos="fade-in" data-aos-duration="900" data-aos-easing="ease-in-sine">
+                    pc
+                    <span></span>
+                    <i>마우스를<br>올려보세요</i>
+                </p>
+                <p class="tablet" data-aos="fade-left" data-aos-duration="900" data-aos-easing="ease-in-sine">테블릿
+                </p>
+                <p class="phone" data-aos="fade-right" data-aos-duration="900" data-aos-easing="ease-in-sine">모바일</p>
+            </div>
+
+            <div class="project_info" data-aos="fade-in" data-aos-duration="900" >
+                <dis class="wrap">
+                    <div class="info_left">
+                        <p class="name"><span>사이트명</span>스윗밸런스</p>
+                        <p class="term"><span>작업기간</span>2주반</p>
+                        <p class="webpage"><span>제작부분</span>반응형 메인페이지</p>
+                        <p class="concept"><span>제작컨셉</span>깔끔한, 건강한, 여유로운</p>
+                    </div>
+                    <div class="info_right">
+                        <p class="description_concept">디자인 컨셉 설명</p>
+                        <p>
+                            브랜드의 상품군을 재 구성해 사용자가 원하는 메뉴를 보다 빨리 찾을 수 있도록
+                            네비게이션 메뉴에 마우스를 올리면 전체 메뉴가 나타나도록 구현하였습니다.<br>
+                            건강한 식사와 내추럴함을 강조한 색상과 직관적이고 사용하기 쉬운 UI를 사용해
+                            사용자와 친근감을 가지도록 디자인하였습니다.
+                        </p>
+                    </div>
+                </dis>
+
+                <div class="info_bottom">
+                    <div class="btn">
+                        <p class="btn_concept">
+                            <a href="img/project1-de-01.png" data-lightbox="image-1" data-title="스윗밸런스 리뉴얼 기획서">디자인 기획</a>
+                            <a href="img/project1-de-02.png" data-lightbox="image-1" data-title="스윗밸런스 리뉴얼 기획서"></a>
+                            <a href="img/project1-de-03.png" data-lightbox="image-1" data-title="스윗밸런스 리뉴얼 기획서"></a>
+                            <a href="img/project1-de-04.png" data-lightbox="image-1" data-title="스윗밸런스 리뉴얼 기획서"></a>
+                            <a href="img/project1-de-05.png" data-lightbox="image-1" data-title="스윗밸런스 리뉴얼 기획서"></a>
+                            <a href="img/project1-de-06.png" data-lightbox="image-1" data-title="스윗밸런스 리뉴얼 기획서"></a>
+                            <a href="img/project1-de-07.png" data-lightbox="image-1" data-title="스윗밸런스 리뉴얼 기획서"></a>
+                            <a href="img/project1-de-08.png" data-lightbox="image-1" data-title="스윗밸런스 리뉴얼 기획서"></a>
+                            <a href="img/project1-de-09.png" data-lightbox="image-1" data-title="스윗밸런스 리뉴얼 기획서"></a>
+                            <a href="img/project1-de-10.png" data-lightbox="image-1" data-title="스윗밸런스 리뉴얼 기획서"></a>
+                        </p>
+                        <p class="btn_web"><a href="./1st project-sweet/index.html" target="_blank">웹사이트 바로가기</a></p>
+                        <p class="btn_og"><a href="https://sweetbalance.kr/" target="_blank">기존 사이트</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5.project #2 -->
+    <section class="content project2" id="portfolio2">
+        <div class="inner">
+            <h3 class="title">
+                <p class="number">Protfolio #2</p>
+                <p class="sub_title">반응형 메인페이지</p>
+                <p class="name">디어달리아</p>
+            </h3>
+
+            <div class="project_img">
+                <p class="pc" data-aos="fade-in" data-aos-duration="900" data-aos-easing="ease-in-sine">
+                    pc
+                    <span></span>
+                    <i>마우스를<br>올려보세요</i>
+                </p>
+                <p class="tablet" data-aos="fade-right" data-aos-duration="900" data-aos-easing="ease-in-sine">테블릿
+                </p>
+                <p class="phone" data-aos="fade-left" data-aos-duration="900" data-aos-easing="ease-in-sine">모바일</p>
+            </div>
+
+            <div class="project_info" data-aos="fade-in" data-aos-duration="900" >
+                <dis class="wrap">
+                    <div class="info_left">
+                        <p class="name"><span>사이트명</span>디어달리아</p>
+                        <p class="term"><span>작업기간</span>3주</p>
+                        <p class="webpage"><span>제작부분</span>반응형 메인페이지</p>
+                        <p class="concept"><span>제작컨셉</span>순수한, 자연스러운, 고급진</p>
+                    </div>
+
+                    <div class="info_right">
+                        <p class="description_concept">디자인 컨셉 설명</p>
+                        <p>
+                            브랜드가 가지는 정체성인 자연주의, 깨끗함, 순수함을 주제로 리 디자인했습니다.<br>
+                            스크롤시 상단메뉴가 고정 되도록 하여 사용자의 편의성을 향상 시켰습니다.<br>
+                            사용자가 가장 많이 찾을 메뉴는 따로 아이콘으로 만들어 해당 페이지로 바로 갈수 있게 구성했으며,
+                            갤러리 부분을 상단으로 위치 시켜 브랜드의 소개와 브랜드를 알리기 위한 방법으로 사용했습니다.<br>
+                            스크롤 이벤트로 진행시키면서 위치에 따라 내용과 이미지의 변화로 지루함을 줄이고자 했습니다.<br>
+                            컨셉 컬러는 비건의 느낌 그리고 고급의 브랜드를 표현하기 위해 화이트와 블랙으로 포인트로 골드를 사용했습니다.
+                        </p>
+                    </div>
+                </dis>
+
+                <div class="info_bottom">
+                    <div class="btn">
+                        <p class="btn_concept">
+                            <a href="img/project2-de-01.png" data-lightbox="image-2" data-title="디어달리아 리뉴얼 기획서">디자인 기획</a>
+                            <a href="img/project2-de-02.png" data-lightbox="image-2" data-title="디어달리아 리뉴얼 기획서"></a>
+                            <a href="img/project2-de-03.png" data-lightbox="image-2" data-title="디어달리아 리뉴얼 기획서"></a>
+                            <a href="img/project2-de-04.png" data-lightbox="image-2" data-title="디어달리아 리뉴얼 기획서"></a>
+                            <a href="img/project2-de-05.png" data-lightbox="image-2" data-title="디어달리아 리뉴얼 기획서"></a>
+                            <a href="img/project2-de-06.png" data-lightbox="image-2" data-title="디어달리아 리뉴얼 기획서"></a>
+                            <a href="img/project2-de-07.png" data-lightbox="image-2" data-title="디어달리아 리뉴얼 기획서"></a>
+                            <a href="img/project2-de-08.png" data-lightbox="image-2" data-title="디어달리아 리뉴얼 기획서"></a>
+                            <a href="img/project2-de-09.png" data-lightbox="image-2" data-title="디어달리아 리뉴얼 기획서"></a>
+                            <a href="img/project2-de-10.png" data-lightbox="image-2" data-title="디어달리아 리뉴얼 기획서"></a>
+                            <a href="img/project2-de-11.png" data-lightbox="image-2" data-title="디어달리아 리뉴얼 기획서"></a>
+                        </p>
+                        <p class="btn_web"><a href="../Portfolio/2nd project-makeup/index_4.html" target="_blank">웹사이트 바로가기</a></p>
+                        <p class="btn_og"><a href="https://deardahlia.kr/index.html" target="_blank">기존 사이트</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 6.My_work-->
+
+    <section class="content My_work" id="mywork">
+       <div class="inner">
+            <h2 class="title">My Work</h3>
+            <div class="btn">
+                <p class="btnVisual">
+                    <a href="#">Brand Design</a>
+                </p>
+                <p class="btnBD"><a href="#">Visual Design <span>6</span></a></p>
+            </div>
+            <div class="tabBox">
+                <ul class="BDPage" style="display: block;">
+					<li class="animate" data-animate="flipInX" data-duration="1.0s" data-delay="0.1s" data-offset="100">
+                        <a href="img/ONDO-01.png" data-lightbox="image-3" data-title="ONDO 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/ONDO-02.png" data-lightbox="image-3" data-title="ONDO 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/ONDO-03.png" data-lightbox="image-3" data-title="ONDO 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/ONDO-04.png" data-lightbox="image-3" data-title="ONDO 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/ONDO-05.png" data-lightbox="image-3" data-title="ONDO 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/ONDO-06.png" data-lightbox="image-3" data-title="ONDO 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/ONDO-07.png" data-lightbox="image-3" data-title="ONDO 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/ONDO-08.png" data-lightbox="image-3" data-title="ONDO 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/ONDO-13.png" data-lightbox="image-3" data-title="ONDO 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/ONDO-14.png" data-lightbox="image-3" data-title="ONDO 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/ONDO-15.png" data-lightbox="image-3" data-title="ONDO 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/ONDO-16.png" data-lightbox="image-3" data-title="ONDO 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                    </li>
+                    <li class="animate" data-animate="flipInX" data-duration="1.0s" data-delay="0.1s" data-offset="100">
+                        <a href="img/SummerSalt-01.png" data-lightbox="image-4" data-title="SUMMER SALT 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/SummerSalt-02.png" data-lightbox="image-4" data-title="SUMMER SALT 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/SummerSalt-04.png" data-lightbox="image-4" data-title="SUMMER SALT 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/SummerSalt-05.png" data-lightbox="image-4" data-title="SUMMER SALT 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/SummerSalt-06.png" data-lightbox="image-4" data-title="SUMMER SALT 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/SummerSalt-07.png" data-lightbox="image-4" data-title="SUMMER SALT 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/SummerSalt-08.png" data-lightbox="image-4" data-title="SUMMER SALT 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/SummerSalt-10.png" data-lightbox="image-4" data-title="SUMMER SALT 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/SummerSalt-11.png" data-lightbox="image-4" data-title="SUMMER SALT 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/SummerSalt-15.png" data-lightbox="image-4" data-title="SUMMER SALT 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/SummerSalt-17.png" data-lightbox="image-4" data-title="SUMMER SALT 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/SummerSalt-19.png" data-lightbox="image-4" data-title="SUMMER SALT 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/SummerSalt-20.png" data-lightbox="image-4" data-title="SUMMER SALT 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/SummerSalt-21.png" data-lightbox="image-4" data-title="SUMMER SALT 로고">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                    </li>
+                    <li class="animate" data-animate="flipInX" data-duration="1.0s" data-delay="0.1s" data-offset="100">
+                        <a href="img/WINYCAM_02.png" data-lightbox="image-5" data-title="WINYCAM 로고 리디자인
+                        ">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/WINYCAM_01.png" data-lightbox="image-5" data-title="WINYCAM 로고 리디인">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="visualPage" style="display: none;">
+                    <li class="animate" data-animate="flipInX" data-duration="1.0s" data-delay="0.1s" data-offset="100" style="animation-duration: 1s; animation-delay: 0.1s; visibility: visible;">
+                        <a href="img/etc_work_01_284x400.png" data-lightbox="image-6" data-title="포스터 리디자인 및 리플렛  (알렌산드로 멘디니 포스터)">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/etc_work-02.png" data-lightbox="image-6" data-title="포스터 리디자인 및 리플렛  (알렌산드로 멘디니 포스터)">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/etc_work-03.png" data-lightbox="image-6" data-title="포스터 리디자인 및 리플렛  (알렌산드로 멘디니 포스터)">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                    </li>
+                    <li class="animate" data-animate="flipInX" data-duration="1.0s" data-delay="0.1s" data-offset="100">
+                        <a href="img/etc_work-04_284x400.png" data-lightbox="image-7" data-title="홍보 포스터 (지역 이벤트)">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/etc_work-05.png" data-lightbox="image-7" data-title="홍보 포스터 (지역 이벤트)">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/etc_work-06.png" data-lightbox="image-7" data-title="홍보 포스터 (지역 이벤트)">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                    </li>
+                    <li class="animate" data-animate="flipInX" data-duration="1.0s" data-delay="0.1s" data-offset="100">
+                        <a href="img/etc_work-08.png" data-lightbox="image-8" data-title="자기 소개 인포그래픽 포스터">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                    </li>
+                    <li class="animate" data-animate="flipInX" data-duration="1.0s" data-delay="0.1s" data-offset="100">
+                        <a href="img/etc_work-09.png" data-lightbox="image-9" data-title="공익 인포그래픽 포스터">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/etc_work-10.png" data-lightbox="image-9" data-title="공익 인포그래픽 포스터">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                    </li>
+                    <li class="animate" data-animate="flipInX" data-duration="1.0s" data-delay="0.1s" data-offset="100">
+                        <a href="img/etc_work-11.png" data-lightbox="image-10" data-title="북커버 디자인">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/etc_work-12.png" data-lightbox="image-10" data-title="북커버 디자인">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                    </li>
+                    <li class="animate" data-animate="flipInX" data-duration="1.0s" data-delay="0.1s" data-offset="100">
+                        <a href="img/etc_work-13.png" data-lightbox="image-11" data-title="메거진 디자인">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                        <a href="img/etc_work-14.png" data-lightbox="image-11" data-title="메거진 디자인">
+                            <i>썸네일이미지</i>
+                            <span>자세히 보기</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>            
+        </div>
+    </section>
+
+
+
+<!--7.Contact -->
+    <section class="content contact" id="contact">
+        <div class="inner">
+            <div class="miniprofile">
+                <p class="miniprofile_title">Web Publisher & Designer</p>
+
+                <ul>
+                    <li><i class="fa-regular fa-user"></i><span>최명지 1993.03.0*(3*)</span></li>
+                    <li><i class="fa-regular fa-hand-point-up"></i><span>꾸준한 발전, 수용하는 디자이너가 되겠습니다.</span></li>
+                    <li><i class="fa-regular fa-envelope"></i><span>lrna8344@gmail.com</span></li>
+                    <li><i class="fa-regular fa-file-pdf"></i><span>포트폴리오 PDF&nbsp;확인</span></li>
+                    <li><i class="fa-regular fa-comment"></i><span><a href="https://open.kakao.com/o/srKFrQze">카카오톡&nbsp;연결하기</a></span></li></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>Copyrightⓒ2022.최명지.All rights reserved.</p>
+                <p>
+                    본 페이지는 상업적 목적이 아닌 최명지 개인 포트폴리오 사이트로 제작되었습니다.<br>
+                    일부 이미지 및 폰트등은 그 출처가 있음을 밝힙니다.
+                </p>
+                <p>해당 사이즈는 1920px 기본사이즈로 제작되었으며 반응형 980px 760px 사이즈로 제작되었습니다.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- 8.Footer -->
+    <footer class="footer">
+        <div class="inner">
+            
+        </div>
+    </footer>
+
+</body>
+</html>
+
