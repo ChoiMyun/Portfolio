@@ -1,2 +1,0 @@
-# Portfolio
- MJ_Portfolio
