@@ -3,845 +3,334 @@
 li, ul, ol{list-style: none;}
 a{text-decoration: none;}
 html {scroll-behavior:smooth;}
+section{}
 
-section .inner{border: 2px solid blue;}
-.toggle{display: none;}
+/* 라이트박스 */
+.inner .btn{width:750px;}
 
-.grid {
-    display: grid;
-    gap: 20px;
-    /* justify-content: space-evenly; */
-}
   
-h1, h2, h3 {
-    color: #4424A7;
-    text-align: center;font-weight: bold;
-    margin-bottom: 30px;
-}
-h4{color: #000;}
-.subtitle{
-    display: block;
-    text-align: center;
-    font-size: 14px;
-    margin-bottom: 4px;
-    color: #666;
-}
+
 /* 서체패밀리 */
 body {
-    font-family: 'IBM Plex Sans KR', sans-serif;
+    /* font-family: 'Gloock', serif; */
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Nanum Gothic', sans-serif;
     background-color: #f9fbff
 }
 
 
-.light-theme .skills__content,
-.light-theme .work__card,
-.light-theme .contact__card {
-  box-shadow:0 3px 10px rgba(0, 0, 0, 0.12);
-
-}
-
-
-
-/* title = 24px bold 'inherit' color:#333
-    sub_title (h2~h3) = 18px bold 'inherit' color :#333
-*/
-/* 
-    sticky 적용이 안되는 경우 4가지
-    1. 부모 높이가 없을 때
-    - 자식 요소의 높이를 잡고 있다면 괜찮음 (자식 요소의 높이 x = 부모 높이가 0)
-    2. 부모들 중에서 overflow 속성이 있으면 안됨
-    3. top/left/right/bottom 반드시 1개는 들어가야 함 
-    4. position: -webkit-sticky; 같이 써줄 것 - 적용이 안되는 브라우저가 있음(인터넷 익스플로러)
-
-
-    ======================
-
-*/
 
 
 /* 공통영역 */
-.content{width: 100%}
+.content{width: 100%; padding: 100px 0}
 .inner{width: 1170px; margin: 0 auto;}
 .wrap{display: flex; justify-content: space-between; flex-wrap: wrap;}
-.sub_title{font: 25px 'DM Serif Display';}
-.section {padding: 100px  0 200px;}
+.title{font: 40px 'DM Serif Display'; color: #1B3060; text-align: center;}
+.sub_title{font: 25px 'Nanum Gothic';color: #1B3060;}
 
-.container {
-  width: 968px;
-  margin-left: auto;
-  margin-right: auto;
+
+/* 배경오버레이 */
+.bg-overlay {
+    position: absolute;right: 0;top: 0;
+    height: 100%;width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);z-index: -10;
 }
 
 
 /* 버튼 */
-.btn {
-  display: inline-block;
-  background-color: #09C0D7;
-  color: #000;
-  padding: 12px 16px;
-  border-radius: 5px;
-  font-weight:bold;
-  transition: 0.4s;
+.btn{display: flex;justify-content: space-evenly;padding: 20px;}
+.btn p{
+    width: 200px;height:auto;border-radius: 10px;
+    text-align: center;line-height: 60px;
+    border: 1px solid #999;
 }
-.btn:hover{
-  background-color: #FFCC40;
-}
-
-.fa-solid {color: #4424A7;}
-
-.main {
-  overflow: hidden;
-}
-
-
-
-/* =================== */
-
-/* 1. header */
-
-/* =================== */
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #f9fbff;
-  z-index: var(--z-fixed);
-  transition: .4s;
-  z-index: 4;
-  display:block;
-
-}
-
-
-.header .nav__container{display: flex;  align-items: center;}
-
-.header_logo{display: flex;width: 300px;}
-.header_logo img{width: 10%;margin-right: 20px;transform: translate(90% , 0px);}
-.header_logo h2{font-size: 20px;color: #000;transform: translate(10% , 50%);}
-
-
-.header .nav__menu {
-  width: calc(100% - 300px);
-  margin: 0; 
-  display:block;
-
-}
-
-.header .nav__menu>ul{display: flex;justify-content: flex-end;}
-.header .nav__menu>ul>li>a{padding: 0 20px; font: 16px/20px 'inherit';font-weight: bold ;color: #666}
-
-
-
-
-
-
-
-.scroll-header {
-  box-shadow:0 3px 10px rgba(0, 0, 0, 0.12);
-
-}
-
-
-
-
-/* =================== */
-
-/* 2. Home */
-
-/* =================== */
-
-
-.home__container {
-    position: relative;
-    row-gap: 70px;
-    padding-top: 100px;
-}
-
-.home__data {
-    text-align: center;
-}
-  
-.home__greeting, 
-.home__education {
-    font-size: var(--small-font-size);
-    font-weight: var(--font-medium);
-}
-  
-.home__greeting {
+.btn p a{
     display: block;
-    color: var(--title-color);
-    margin-bottom: 5px;
+    font: bold 16px/60px 'Nanum Gothic';text-align: center;transition: 0.3s;color: #333;
 }
-  
-.home__education {
-    color: var(--text-color);
-    margin-bottom: 40px;
+.btn p:hover {overflow: hidden;border: 1px transparent;}
+.btn p:hover a{color: #fff;}
+
+
+
+
+@media screen and (max-width : 2000px){
+
+
 }
-  
-.home__name {
-    font-size: var(--biggest-font-size);
+@media screen and (max-width : 1200px){
+
+
 }
-  
-.home__img {
-  width: 300px;
-  transform: translate(-5px, 100px);
-  z-index: 1;
+@media screen and (max-width : 768px){
+
+
 }
 
 
-.home__handle {
-  justify-self: center;
-  width: 300px;
-  height: 400px;
-  background:linear-gradient(150deg, transparent,
-  rgba(9,192,215) 150px,rgba(90,54,204));
-  /* background:linear-gradient(140deg, transparent, transparent 60px,
-  rgba(255, 127, 0, 0.25) 300px); */
-  border-radius: 180px 180px 16px 16px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  overflow: hidden;
-  z-index: 1;
+
+
+
+
+/* =================== */
+
+/* 5. project #1 */
+
+/* =================== */
+
+.project1{
+    background: url(../img/500pxhomeimg-11.png) no-repeat;
+    background-size: 60%;
+    background-position: 800px 100px; 
 }
-  
-.home__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-}
-  
-.home__scroll {
+.project1 .inner{position: relative;}
+
+.project1 .title{
     position: absolute;
+    left: 0;top: 0;
+    font-size: 24px;line-height: 70px;
+    text-align: left;
 }
-  
-  
-.home__scroll {
-    color: #000;
-    right: -24px;
-    bottom: 30px;
-    display: grid;
-    row-gap: 25px;
-    justify-items: center;
+.project1 .title .number{font-size: 30px;}
+.project1 .title .sub_title{font: bold  18px 'Nanum Gothic';padding-bottom: 5px;border-bottom: 2px solid #1B3060;}
+.project1 .title .name{font: bold  30px 'Nanum Gothic';margin-top: 20px;}
+
+/* project1 - 상단 작업이미지 */
+.project1 .project_img {text-indent: -9999px;}
+.project1 .project_img .wrap{
+    position:relative;left: 60%;height: 50%;transform:translate(-50%);
+    width: 960px ;height: 540px;overflow: hidden;
 }
-  
-.home__scroll-icon {
-    font-size: 20px;
-    margin-bottom: 20px;
+.project1 .project_img .wrap p{width: 100%;position: absolute;}
+.project1 .project_img .wrap p img{width: 80%}
+
+/* project1 - 상단 작업이미지 - PC */
+.project1 .inner .project_img .pc{
+    height: 600px;
+    background:url(../img/project1-1.png) no-repeat;
+    background-size: 100%;
 }
-  
-.home__scroll-name {
-    font-size: var(--smaller-font-size);
-    transform: rotate(-90deg);
+.project1 .inner .project_img .pc span{
+    display:block;
+    position:absolute;
+    top: 110px;left: 50%;transform: translateX(-50%);
+    width:510px; height:300px;
+    background:url(../img/Portfolio-1st-project.png);
+    background-size:cover;
 }
+.project1 .inner .project_img .pc span:hover{animation:shiScroll 10s ease infinite;}
+.project1 .inner .project_img .pc i{left:25px; top:30px; background:rgba(64, 132, 231,0.5);}
 
-/* home - img */
-.home .img__section{position: relative;}
-
-.home .img__section img:nth-child(1) {
-  position: absolute;
-  width: 300px;
-  right:90px;bottom: -20px;
-}
-.home .img__section img:nth-child(2) {
-  position: absolute;
-  width: 380px;
-  left:40px;top: -500px;
-  z-index: 2;
-}
-.home .img__section .rotation{
-  animation: rotate_image  16s linear infinite;
-  transform-origin: 50% 50%;
-}
-
-.home .img__section p{
-  position: absolute;
-  font-family:'Times New Roman', Times, serif;
-  font-size: 70px;
-  text-align: center;transform: translateX(-50%);
-  color: #09C0D7;
-  z-index: 2;
-}
-
-.home .img__section p:nth-child(3) {bottom: 120px;left: 250px ;text-align: left;}
-
-.home .img__section p:nth-child(4) {bottom: 20px;right: -10%;z-index: 3;}
-
-@keyframes rotate_image {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* =================== */
-
-/* 3. About Me */
-
-/* =================== */
-
-.about__container {
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  column-gap: 0px;
-}
-
-
-.about__container .about_img{
-    width: 300px;
-    border-radius: 15px;
-    justify-self: center;
-}
-
-.about__data{
-    text-align: initial;
-}
-.about__info{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-}
-.about__box{
-    background-color: #fff;
-    box-shadow:0 3px 10px rgba(0, 0, 0, 0.12);
-    border-radius: 20px;
-    padding: 20px 10px;
-    text-align: center;
-}
-.about__icon{
-    font-size: 18px;
-    color: #09C0D7;
-}
-.sub__title{
-    font-size: 16px;
-    margin: 5px 0;
-}
-.about__subtitle{
-    font-size: 14px;
-    color: #333;
-}
-.about__description{
-    padding: 0 60px 0 0;
-    margin: 30px 0 50px 0;
-    line-height: 28px;
-    color: #333;
-}
-
-.about__description >span{
-    font-weight: bold;
-
-}
-.about .about__container .about__data>.btn{
-    font-weight: bold;
-}
-
-/* =================== */
-
-/* 4. Skill */
-
-/* =================== */
-
-
-
-.skills__container {
-  padding: 50px;
-  display: flex;
-  justify-content: center;
-  background: url(../img/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position:center;
-}
-
-.skills__content {
-  background-color: #fff;
-  padding: 25px;
-  border-radius: 20px;
-  width: 350px;
-}
-
-
-
-.skills__box {
-  display: flex;
-  justify-content: center;
-  column-gap: 25px;
-}
-
-.skills__box .left{}
-
-.skills__group {
-  display: grid;
-  align-content: flex-start;
-  row-gap: 20px;
-}
-
-.skills__data {
-  display: flex;
-  column-gap: 15px;
-}
-
-.skills__name {
-  text-align: left;
-  font-size: 14px;
-  margin-bottom: 0px;
-}
-
-.skills__level {
-  font-size:12px ;
-  color: #333;
-}
-
-.fa-solid {
-  display:inline;
-  width: 16px;
-}
-
-
-
-/* =================== */
-
-/* 5. My_work */
-
-/* =================== */
-
-.work__container {
-  grid-template-columns: repeat(2, max-content);
-  justify-content: center;
-}
-
-.work__title{text-align: left;}
-
-.work__card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow:0 3px 10px rgba(0, 0, 0, 0.12);
-
-}
-
-.work section .work__card img{
-  height: 100%;
-  width: 100px;
-  object-fit: cover;
-}
-
-.work__img {
-  border-radius: 16px;
-  margin-bottom: 20px;
-}
-
-.work__filters{
-  text-align: center;
-}
-
-.work__filters ul{
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  
-}
-
-
-.work__filters .work__item{
-  font-weight: bold;
-  text-transform: uppercase;
-  border-radius: 15px;
-  cursor: pointer;
-  margin: 34px 4px;
-  font-size: 18px;
-  padding: 10px 30px;
-  display:inline-block;
-
-}
-
-/* Active link */
-.active-work {background-color: #FFCC40;}
-.work__filters .work__item:hover {background-color: #FCEAD4;}
-
-
-
-.work__button .fa-angle-right{
-  font-size: 16px;
-  transition: .4s;
-  color:#09C0D7
-}
-.work__button a{color: #09C0D7;font-weight:normal;}
-.work__button:hover .fa-angle-right {
-  transform: translateX(10px);
-}
-
-
-/* =================== */
-
-/* 6. contact */
-
-/* =================== */
-
-
-.contact__container {
-  grid-template-columns: repeat(2, max-content);
-  justify-content: center;
-  column-gap: 50px;
-}
-
-.contact__content .contact__title {
-  text-align: center;
-  font-size: 20px;
-  margin-bottom: 24px;
-}
-
-.contact__content .contact__info {
-  display: grid;
-  gap: 16px;
-}
-
-.contact__content .contact__card {
-  background-color:#fff;
-  padding: 16px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow:0 3px 10px rgba(0, 0, 0, 0.12);
-
-}
-
-.contact__content .contact__card-icon {
-  font-size: 30px;
-  color:#09C0D7;
-  margin-bottom: 5px;
-}
-
-.contact__content .contact__card-title, 
-.contact__content .contact__card-data {
-  font-size: 16px;
-  color: #666;
-}
-
-.contact__content .contact__card-title {
-  font-weight:600;
-  margin-bottom: 0px;
-}
-
-.contact__content .contact__card-data {
-  display: block;
-  margin-bottom: 12px;
-}
-
-.contact__content .left {height: 488.906px;padding: 40px; }
-
-.contact__content .left .contact__card-data__img img{width: 200px;margin: 20px 0}
-.contact__content .left ul li {margin-bottom: 20px;text-align: left;}
-.contact__content .left ul li span{margin-left: 20px;}
-
-.contact__content .contact__button {
-  color: #666;
-  font-size:medium;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 5px;
-}
-
-.contact__content .contact__button:hover .contact__button-icon {
-  transform: translateX(5px);
-
-}
-
-.contact__content .contact__button-icon {
-  font-size: 16px;
-  transition: .4s;
-  color: #666;
-}
-
-
-
-.contact__content .contact__form-div {
-  position: relative;
-  margin-bottom: 60px;
-  height: 30px;
-}
-
-.contact__content .contact__form-input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 2px solid #666;
-  background: none;
-  color: #666;
-  outline: none;
-  padding: 24px;
-  border-radius: 12px;
-  z-index: 1;
-}
-
-.contact__content .contact__form-tag {
-  position: absolute;
-  top: -12px;
-  left: 15px;
-  font-size: 14px;
-  padding: 5px 10px;
-  background-color: #f9fbff;
-  z-index: 10;
-}
-
-.contact__content .contact__form-area {
-  height: 200px;
-}
-
-.contact__content .contact__form-area textarea {
-  resize: none;
-}
-
-.contact__content .btn{border: none;}
-
-
-/* =================== */
-
-/* 7.footer */
-
-/* =================== */
-.footer {
-  background-color: #DEE6F5;
-}
-
-.footer__container {
-  padding: 90px 0 90px;
-}
-
-.footer__title, 
-.footer__link {
-  color: var(--body-color);
-}
-
-.footer__title {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.footer__list {
-  display: flex;
-  justify-content: center;
-  column-gap: 24px;
-  margin-bottom: 30px;
-}
-
-.footer__copy {
-  display: block;
-  margin-top: 70px;
-  color: var(--container-color);
-  text-align: center;
-  font-size: var(--smaller-font-size);
-}
-.footer__copy p{font-size: 14px;line-height: 30px;text-align: center;}
-
-
-
-/* =================== */
-
-/* 8.Arrow UP */
-
-/* =================== */
-.arrow-up{
-  position: fixed;
-  bottom: 50px;
-  right: 40px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  font-size: 30px;
-  border-radius: 50%;
-  color: #fff;
-  background-color: #09C0D7;
-  opacity: 0;
-  transition: all 300ms ease-in ;
-  pointer-events: none;
-}
-.arrow-up .fa-arrow-up{color: #fff;}
-.arrow-up.visible{
-  opacity: 1;
-  pointer-events:all ;
-}
-
-
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-/* @media screen and (max-width: 320px) {
-    .nav__menu {
-      padding: 16px 24px;
-    }
-  
-    .home__btn {
-      flex-direction: column;
-    }
-    .home__handle {
-      width: 150px;
-      height: 253px;
-    }
-    .home__img {
-      width: 130px;
-    }
-  
-    .about__info {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .skills__box {
-      column-gap: 16px;
-    }
-    .skills__name {
-      font-size: var(--small-font-size);
-    }
-  
-  
-    .work__item {
-      font-size: var(--small-font-size);
-    }
-    .work__filters {
-      column-gap: 5px;
-    }
-} */
-  
-/* For medium devices */
-/* @media screen and (min-width: 576px) {
-} */
-  
-
-  
-/* For large devices */
-@media screen and (max-width: 1200px) {
-
-}
-
-@media screen and (max-width: 960px) {
-  .container {
-    width:90vw;
-  }
-  .home .img__section img:nth-child(1) {
-    width: 250px;
-  }
-  .home .img__section img:nth-child(2){
-    width: 330px;
-  }
-
-  .about__container .about_img{
-    width: 250px;
-  }
-  .home .img__section p{
-    font-size: 60px;
-  }
-
-  .toggle{
+.project1 .inner .project_img .pc i {
     display: block;
-    position: fixed; right: 50px; top: 15px; 
-    font-size: 28px; 
-    background-color: transparent; text-align: center;
-    border: 0; outline: 0; cursor: pointer
-  }
-  .header .nav__menu{
-    position: fixed; right:-200px; top: 60px;
-    width: 150px; height: 100%; background-color: #eee;
-    transition: 0.5s;
-    box-shadow: 0px 10px  rgba(0, 0, 0, 0.12);
-  } 
-  .header .nav__menu>ul{flex-direction: column}
-  .header .nav__menu>ul>li{padding:20px 30px;}
-
-  .nav__menu.on{right: 0;}
-}
-
-@media screen and (max-width: 768px) {
-
-  .about__container .about_img{
-    width: 200px;
-  }
-
-  .skills__container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .work__img{
-    width: 200px;
-  }
-
-  .contact__content .left{
-    width: 350px;
-  }
-}
-
-/* @media screen and (min-width: 1200px) {
-
-
-
-  .section__title {
-    margin-bottom: 60px;
-  }
-
-  .home__handle {
-    width: 400px;
-    height: 400px;
-  }
-
-  .about__container {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    column-gap: 0px;
-  }
-  .about__img {
-    width: 350px;
-  }
-  .about__data {
-    text-align: initial;
-  }
-  .about__info {
-    justify-content: initial;
-  }
-  .about__box {
+    position: absolute;
+    left: 780px;top: 100px;
+    width: 80px;height: 80px;
+    border-radius: 50%;
+    color: #000;
     text-align: center;
-    padding: 16px 15px;      
-  }
+    text-indent: 0;
+    padding: 20px 0;
+    font: 12px/20px 'inherit';
+    opacity: 1;
+    background: #EDF5E6;
 
-  .skills__container {
-    grid-template-columns: repeat(2, 350px);
-    column-gap: 60px;
-  }
+}
+/* project1 - 상단 작업이미지 - tablet */
+.project1 .inner .project_img .tablet{
+    position: absolute;
+    top: 0;right: -30px;
+    width: 360px;height: 650px;
+    background: url(../img/project1-2.png);
+    background-position: right;
+    background-size: cover;
+
+}
+/* project1 - 상단 작업이미지 - phone */
+.project1 .inner .project_img .phone{
+    position: absolute;
+    top: 0;left: -30px;
+    width: 360px;height: 650px;
+    background:url(../img/project1-3.png);
+    background-position: left;
+    background-size: cover;
+}
+
+@keyframes shiScroll{
+	0%{background-position: 0 0;}
+    25%{background-position:0 -500px}
+	50%{background-position:0 -1500px}
+    75%{background-position:0 -2000px}
+	100%{background-position: 0 0;}
+}
+
+/* project1 - 작업설명 */
+.project1 .project_info{
+    position: relative;
+    width: 100%;bottom: 0px;
+}
+.project1 .project_info .info_left,
+.project_info .info_right{
+    width: 50%;padding: 10px 30px;
+    text-align: left; font-size: 14px; line-height: 30px;
+}
+.project1 .project_info .info_left span,.description_concept{font: bold 16px 'ub';letter-spacing: 2px;margin-right: 20px;}
 
 
-  .work__container {
-    gap: 40px;
-    justify-content: center;
-  }
-  .work__card {
-    padding: 15px;
-  }
-  .work__img {
-    margin-bottom: 16px;
-  }
-  .work__title {
-    margin-bottom: 40px;
-  }
+/* project1 하단 박스 버튼 */
+.project1 .project_info .info_bottom{padding: 10px 0 ;}
+.project1 .project_info .info_bottom .btn{transform: translateX(25%);}
+.project1 .btn p:hover {background-color: #0F5C4B;}
 
-  .contact__container {
-    column-gap: 90px;
-  }
-} */
+/* =================== */
 
-/* @media screen and (min-width: 760px) {
-    .work__container {
-      grid-template-columns: repeat(2, max-content);
-    }
+/* 5. project #2 */
 
-  
-    .contact__container {
-      grid-template-columns: repeat(2, max-content);
-      justify-content: center;
-      column-gap: 50px;
-    }
+/* =================== */
 
-} */
+.project2{
+    background: url(../img/500pxhomeimg-08.png) no-repeat;
+    background-size: cover;
+    background-position: -600px -300px;
+}
+.project2 .inner{position: relative;}
+
+.project2 .title{
+    position: absolute;
+    left: 0;top: 0;
+    font-size: 24px;line-height: 70px;
+    text-align: left;
+}
+.project2 .title .number{font-size: 30px;}
+.project2 .title .sub_title{font: bold  18px 'Nanum Gothic';padding-bottom: 5px;border-bottom: 2px solid #1B3060;}
+.project2 .title .name{font: bold  30px 'Nanum Gothic';margin-top: 20px;}
+
+/* project2 - 상단 작업이미지 */
+.project2 .project_img {text-indent: -9999px;}
+.project2 .project_img .wrap{
+    position:relative;left: 60%;height: 50%;transform:translate(-50%);
+    width: 960px ;height: 540px;overflow: hidden;
+}
+.project2 .project_img .wrap p{width: 100%;position: absolute;}
+.project2 .project_img .wrap p img{width: 80%}
+
+/* project2 - 상단 작업이미지 - PC */
+.project2 .inner .project_img .pc{
+    height: 600px;
+    background:url(../img/project2-1.png) no-repeat;
+    background-size: 100%;
+}
+.project2 .inner .project_img .pc span{
+    display:block;
+    position:absolute;
+    top: 110px;left: 50%;transform: translateX(-50%);
+    width:530px; height:300px;
+    background:url(../img/Portfolio-2nd-project.png);
+    background-size:cover;
+}
+.project2 .inner .project_img .pc span:hover{animation:shiScroll-1 10s ease infinite;}
+.project2 .inner .project_img .pc i{left:25px; top:30px; background:rgba(64, 132, 231,0.5);}
+
+.project2 .inner .project_img .pc i {
+    display: block;
+    position: absolute;
+    left: 780px;top: 100px;
+    width: 80px;height: 80px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    text-indent: 0;
+    padding: 20px 0;
+    font: 12px/20px 'Ubuntu';
+    opacity: 1;
+    background: #bf6160;
+
+}
+/* project2 - 상단 작업이미지 - tablet */
+.project2 .inner .project_img .tablet{
+    position: absolute;
+    top: 0;left: -30px;
+    width: 360px;height: 650px;
+    background: url(../img/project2-2.png);
+    background-position: left;
+    background-size: cover;
+
+}
+/* project2 - 상단 작업이미지 - phone */
+.project2 .inner .project_img .phone{
+    position: absolute;
+    top: 0;right: -30px;
+    width: 360px;height: 650px;
+    background:url(../img/project2-3.png);
+    background-position: right;
+    background-size: cover;
+}
+
+@keyframes shiScroll-1{
+	0%{background-position: 0 0;}
+    15%{background-position:0 -1000px}
+    30%{background-position:0 -2000px}
+    45%{background-position:0 -2500px}
+	60%{background-position:0 -3000px}
+    75%{background-position:0 -3500px}
+    90%{background-position:0 -4700px}
+	100%{background-position: 0 0;}
+}
+
+/* project2 - 작업설명 */
+.project2 .project_info{
+    position: relative;
+    width: 100%;bottom: 0px;
+}
+.project2 .project_info .info_left,
+.project_info .info_right{
+    width: 50%;padding: 10px 30px;
+    text-align: left; font-size: 14px; line-height: 30px;
+}
+.project2 .project_info .info_left span,.description_concept{font: bold 16px 'ub';letter-spacing: 2px;margin-right: 20px;}
+
+/* project#2 하단 박스 버튼 */
+.project2 .project_info .info_bottom{padding: 10px 0 ;}
+.project2 .project_info .info_bottom .btn{transform: translateX(25%);}
+.project2 .btn p:hover {background-color: #EDA3AF;}
+
+
+
+
+
+
+
+
+/* =================== */
+
+/* 7. Contact */
+
+/* =================== */
+
+.contact{
+    width: 100%;height:100%;
+    background: url(../img/1400X788.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.contact .inner{
+    padding: 100px 0;
+}
+.contact .inner .miniprofile_title{font: bold 38px 'inherit';margin-bottom: 50px;}
+
+.contact .inner .miniprofile{
+    font:20px/40px 'inherit';
+    text-align: left;
+    padding-left: 500px;margin-bottom: 100px;
+    color: #fff;
+}
+.miniprofile ul>li i{font-size: 20px}
+.miniprofile ul>li>span{margin-left: 20px;}
+.miniprofile ul>li>span>a{color: #fff;}
+.contact .inner .copyright{font-size: 14px;line-height: 30px;text-align: center;}
+
+
+
 
